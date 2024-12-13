@@ -4,6 +4,7 @@ import axios from "axios";
 import { Box, Button, Typography, Stack } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import RefreshIcon from "@mui/icons-material/Refresh";
+const BASE_API_URL = import.meta.env.VITE_BASE_API_URL;
 
 const TokenManager = () => {
     const [timeLeft, setTimeLeft] = useState(0);
@@ -23,11 +24,12 @@ const TokenManager = () => {
 
     const refreshToken = async () => {
         try {
-            const response = await axios.post("http://127.0.0.1:8000/api/token/refresh/", {
+            const response = await axios.post(`${BASE_API_URL}/auth/refresh/`, {
                 refresh: localStorage.getItem("refresh_token"),
             });
             localStorage.setItem("access_token", response.data.access);
             setTimeLeft(calculateTimeLeft());
+            // eslint-disable-next-line no-unused-vars
         } catch (err) {
             alert("Failed to refresh token. Please log in again.");
             localStorage.removeItem("access_token");
