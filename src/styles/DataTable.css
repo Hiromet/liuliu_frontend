@@ -1,0 +1,74 @@
+/* Estilo para la tabla */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilo para los encabezados */
+.data-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para las celdas */
+.data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilo para las filas */
+.data-table tr {
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover para las filas */
+.data-table tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las filas sin datos */
+.data-table .no-data {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+    padding: 20px;
+}
+
+/* Botón de eliminar */
+.delete-button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Hover para el botón de eliminar */
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 8px;
+    }
+
+    .delete-button {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}

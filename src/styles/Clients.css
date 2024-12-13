@@ -1,0 +1,39 @@
+.clients-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.clients-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+}
+
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-header {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-cell {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+    font-style: italic;
+}
